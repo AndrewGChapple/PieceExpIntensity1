@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "Package: PieceExpIntensity\nType: Package\nTitle: Bayesian Model to Find Changepoints Based on Rates and Count Data\nVersion: 1.0.1\nAuthor: Andrew G. Chapple\nMaintainer: Andrew G. Chapple <agc6@rice.edu>\nDescription: This function fits a reversible jump Bayesian piecewise exponential model that also includes the intensity of each event considered along with the rate of events.\nLicense: GPL-2\nEncoding: UTF-8\nLazyData: true\nImports: Rcpp (>= 0.12.9)\nLinkingTo: Rcpp, RcppArmadillo\nRoxygenNote: 6.0.1\n",
+    "created" : 1508981931469.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1198119093",
+    "id" : "EDCFBD3",
+    "lastKnownWriteTime" : 1509200168,
+    "last_content_update" : 1509200168008,
+    "path" : "D:/Users/Andrew/Desktop/Rice/Dr.Thall/PieceExpIntensity/DESCRIPTION",
+    "project_path" : "DESCRIPTION",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "dcf"
+}

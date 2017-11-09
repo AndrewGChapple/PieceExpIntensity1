@@ -1,0 +1,107 @@
+[
+    {
+        "definitions" : [
+            {
+                "column" : 8,
+                "file" : "D:/Users/Andrew/Desktop/Rice/Dr.Thall/PieceExpIntensity/src/PieceRATE13.cpp",
+                "kind" : 6,
+                "line" : 28,
+                "name" : "MaxVec(arma::vec)",
+                "parent_name" : "",
+                "usr" : "c:@F@MaxVec#$@N@arma@C@Col>#d#"
+            },
+            {
+                "column" : 8,
+                "file" : "D:/Users/Andrew/Desktop/Rice/Dr.Thall/PieceExpIntensity/src/PieceRATE13.cpp",
+                "kind" : 6,
+                "line" : 42,
+                "name" : "min1(double, double)",
+                "parent_name" : "",
+                "usr" : "c:@F@min1#d#d#"
+            },
+            {
+                "column" : 8,
+                "file" : "D:/Users/Andrew/Desktop/Rice/Dr.Thall/PieceExpIntensity/src/PieceRATE13.cpp",
+                "kind" : 6,
+                "line" : 55,
+                "name" : "max1(double, double)",
+                "parent_name" : "",
+                "usr" : "c:@F@max1#d#d#"
+            },
+            {
+                "column" : 8,
+                "file" : "D:/Users/Andrew/Desktop/Rice/Dr.Thall/PieceExpIntensity/src/PieceRATE13.cpp",
+                "kind" : 6,
+                "line" : 67,
+                "name" : "cumsumlog(int)",
+                "parent_name" : "",
+                "usr" : "c:@F@cumsumlog#I#"
+            },
+            {
+                "column" : 8,
+                "file" : "D:/Users/Andrew/Desktop/Rice/Dr.Thall/PieceExpIntensity/src/PieceRATE13.cpp",
+                "kind" : 6,
+                "line" : 85,
+                "name" : "Like(arma::vec, arma::vec, arma::vec, arma::vec, arma::vec, int)",
+                "parent_name" : "",
+                "usr" : "c:@F@Like#$@N@arma@C@Col>#d#S0_#S0_#S0_#S0_#I#"
+            },
+            {
+                "column" : 11,
+                "file" : "D:/Users/Andrew/Desktop/Rice/Dr.Thall/PieceExpIntensity/src/PieceRATE13.cpp",
+                "kind" : 6,
+                "line" : 145,
+                "name" : "GetBounds(arma::vec, double, double)",
+                "parent_name" : "",
+                "usr" : "c:@F@GetBounds#$@N@arma@C@Col>#d#d#d#"
+            },
+            {
+                "column" : 8,
+                "file" : "D:/Users/Andrew/Desktop/Rice/Dr.Thall/PieceExpIntensity/src/PieceRATE13.cpp",
+                "kind" : 6,
+                "line" : 194,
+                "name" : "MinVec(arma::vec)",
+                "parent_name" : "",
+                "usr" : "c:@F@MinVec#$@N@arma@C@Col>#d#"
+            },
+            {
+                "column" : 5,
+                "file" : "D:/Users/Andrew/Desktop/Rice/Dr.Thall/PieceExpIntensity/src/PieceRATE13.cpp",
+                "kind" : 6,
+                "line" : 210,
+                "name" : "SampleDeath(int)",
+                "parent_name" : "",
+                "usr" : "c:@F@SampleDeath#I#"
+            },
+            {
+                "column" : 5,
+                "file" : "D:/Users/Andrew/Desktop/Rice/Dr.Thall/PieceExpIntensity/src/PieceRATE13.cpp",
+                "kind" : 6,
+                "line" : 220,
+                "name" : "SampleBirth(arma::vec)",
+                "parent_name" : "",
+                "usr" : "c:@F@SampleBirth#$@N@arma@C@Col>#d#"
+            },
+            {
+                "column" : 5,
+                "file" : "D:/Users/Andrew/Desktop/Rice/Dr.Thall/PieceExpIntensity/src/PieceRATE13.cpp",
+                "kind" : 6,
+                "line" : 254,
+                "name" : "factorial(int)",
+                "parent_name" : "",
+                "usr" : "c:@F@factorial#I#"
+            },
+            {
+                "column" : 6,
+                "file" : "D:/Users/Andrew/Desktop/Rice/Dr.Thall/PieceExpIntensity/src/PieceRATE13.cpp",
+                "kind" : 6,
+                "line" : 266,
+                "name" : "PieceExpIntensity1(arma::vec, arma::vec, int, double)",
+                "parent_name" : "",
+                "usr" : "c:@F@PieceExpIntensity1#$@N@arma@C@Col>#d#S0_#I#d#"
+            }
+        ],
+        "file" : "D:/Users/Andrew/Desktop/Rice/Dr.Thall/PieceExpIntensity/src/PieceRATE13.cpp",
+        "file_last_write" : 1509200027
+    }
+]

@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "#'  Runs the PieceExpIntensity sampler and returns posterior results.\n#'\n#'  Returns a list of posterior samples along with summaries for the most visited number of split points.\n#' @importFrom Rcpp evalCpp\n#' @importFrom stats quantile\n#' @param X   Vector containing observed event times.\n#' @param Y Vector containing poisson count intensities.\n#' @param B Number of iterations to run the MCMC with half burned in.\n#' @param Poi Prior mean number of split points.\n#' @return A list of all posterior quantities and a summary of the most commonly visited model.\n#' @references\n#' Chapple (2017). Modeling ISIL terror attacks and their intensities via flexible Bayesian piecewise models. Currently Under Review.\n#' @examples\n#' B=1000\n#' n=100\n#' X=rexp(n,1)\n#' Y=X\n#' Y[X<.5]=rpois(sum(X<.5),20)\n#' Y[X>.5]=rpois(sum(X>.5),3)\n#' Poi=10\n#' PieceExpIntensity1(X,Y,B,Poi)\n#' @export\nPieceExpIntensity=function(X,Y,B,Poi){\n\n  B1=B/2\n\n  if(sum(Y%%1==0)==length(Y)){\n\n    if(min(X)<0){\n cat(\"Some event times are less than 0, please fix\n\n     \")\n\n      return(NULL)\n    }else{\n\nG1=PieceExpIntensity1(X,Y,B,Poi)\n\n##Now Get the mode and return some stuff\n\nMode <- function(x) {\n  ux <- unique(x)\n  ux[which.max(tabulate(match(x, ux)))]\n}\n\n###Now find samples for the two most visited number of split points\nNumSplit=Mode(G1[[4]])\nJ=NumSplit+2\nJ1=J-1\n\ncat(\"Posterior Mode of Split Points:\",NumSplit,\"\n\n    \")\n\ns1=matrix(rep(NA,J*B1),ncol=J)\nlam1=matrix(rep(NA,J1*B1),ncol=J1)\nrate1=matrix(rep(NA,J1*B1),ncol=J1)\n\n\nfor(b in 1:B1){\n  if(G1[[4]][b]==NumSplit){\n    s1[b,]=G1[[1]][b,1:J]\n    lam1[b,]=G1[[2]][b,1:J1]\n    rate1[b,]=G1[[3]][b,1:J1]\n\n\n  }\n\n\n}\n\n\n\ncat(\"Posterior Mean Location of Split Points (and Credible Interval) for J =\",NumSplit,\"\n\n    \")\n\n\nprint(colMeans(s1,na.rm=TRUE))\n\n\nprint(apply(s1,2,function(z){quantile(z,probs=c(.025,.975),na.rm=TRUE)}))\n\n\n\ncat(\"Posterior Mean Log-Hazards (and Credible Interval) for J =\",NumSplit,\"\n\n    \")\n\n##How did rates change\nprint(colMeans(lam1,na.rm=TRUE))\n\nprint(apply(lam1,2,function(z){quantile(z,probs=c(.025,.975),na.rm=TRUE)}))\n\n\n##How much did they happen\n\ncat(\"Posterior Mean Intensity Rates (and Credible Interval) for J =\",NumSplit,\"\n\n    \")\n\nprint(colMeans(exp(rate1),na.rm=TRUE))\n\nprint(apply(exp(rate1),2,function(z){quantile(z,probs=c(.025,.975),na.rm=TRUE)}))\n\n\n\nreturn(G1)\n\n\n\n\n\n}\n\n\n  }else{\n\n    cat(\"Y does not contain count data\n\n        \")\n    return(NULL)\n}\n\n\n}\n",
+    "created" : 1508981574728.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1345777694",
+    "id" : "19C3F57E",
+    "lastKnownWriteTime" : 1509052256,
+    "last_content_update" : 1509052256227,
+    "path" : "D:/Users/Andrew/Desktop/Rice/Dr.Thall/PieceExpIntensity/R/PieceExpIntensity.R",
+    "project_path" : "R/PieceExpIntensity.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

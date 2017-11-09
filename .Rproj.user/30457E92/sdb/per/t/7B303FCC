@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "#'  C++ Sampling Function\n#'\n#'  C++ Sampling Function used in the PieceExpIntensity function.\n#' @importFrom Rcpp evalCpp\n#' @importFrom stats quantile\n#' @param Y   Vector containing observed event times.\n#' @param Rates Vector containing poisson count intensities.\n#' @param B Number of iterations to run the MCMC with half burned in.\n#' @param Poi Prior mean number of split points,\n#' @return A list of all posterior quantities.\n#' @examples\n#' B=1000\n#' n=100\n#' Y=rexp(n,1)\n#' Rates=Y\n#' Rates[Y<.5]=rpois(sum(Y<.5),20)\n#' Rates[Y>.5]=rpois(sum(Y>.5),3)\n#' Poi=10\n#' PieceExpIntensity1(Y,Rates,B,Poi)\n#' @export\nPieceExpIntensity1 <- function(Y, Rates, B, Poi) {\n  .Call('PieceExpIntensity_PieceExpIntensity1', PACKAGE = 'PieceExpIntensity', Y,Rates, B, Poi)\n}\n",
+    "created" : 1509031801977.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3067492939",
+    "id" : "7B303FCC",
+    "lastKnownWriteTime" : 1509052157,
+    "last_content_update" : 1509052157325,
+    "path" : "D:/Users/Andrew/Desktop/Rice/Dr.Thall/PieceExpIntensity/R/PieceExpIntensity1.R",
+    "project_path" : "R/PieceExpIntensity1.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
